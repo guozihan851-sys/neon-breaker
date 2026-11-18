@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#07070f" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="description" content="NEON BREAKER — 一个纯前端的霓虹风格打砖块街机小游戏，支持键盘、鼠标与触屏操作。" />
+<title>NEON BREAKER · 霓虹突围</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307070f'/><circle cx='16' cy='19' r='5' fill='%2300f0ff'/><rect x='7' y='6' width='18' height='4' rx='2' fill='%23ff2fb9'/></svg>" />
+</head>
+<body>
+<div id="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-main">NEON</span><span class="brand-sub">BREAKER</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><label>得分</label><b id="hudScore">0</b></div>
+      <div class="stat"><label>最高</label><b id="hudHigh">0</b></div>
+      <div class="stat"><label>关卡</label><b id="hudLevel">1</b></div>
+      <div class="stat stat-lives"><label>生命</label><b id="hudLives">3</b></div>
+      <div class="stat"><label>连击</label><b id="hudCombo">x1</b></div>
+    </div>
+
+    <div class="controls">
+      <button class="icon-btn" id="btnSound" title="音效开关 (M)" aria-label="音效开关">🔊</button>
+      <button class="icon-btn" id="btnPause" title="暂停 (P)" aria-label="暂停">⏸</button>
+      <button class="icon-btn" id="btnFull" title="全屏 (F)" aria-label="全屏">⛶</button>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+    <canvas id="game" width="960" height="600" aria-label="游戏画面"></canvas>
+
+    <div class="overlay" id="overlay">
+      <div class="panel" id="panel"><!-- JS 注入内容 --></div>
+    </div>
+
+    <div class="touch-hint" id="touchHint">拖动 / 滑动控制挡板</div>
+    <div class="rotate-hint">🔄 横屏游玩体验更佳</div>
+  </main>
+
+  <footer class="hints">
+    <span><kbd>←</kbd><kbd>→</kbd> 或 <kbd>鼠标</kbd> 移动</span>
+    <span><kbd>空格</kbd> 发射 / 开始</span>
+    <span><kbd>P</kbd> 暂停</span>
+    <span><kbd>M</kbd> 静音</span>
+    <span><kbd>R</kbd> 重开</span>
+  </footer>
+
+</div>
+
+<script src="js/audio.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
