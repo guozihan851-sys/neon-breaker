@@ -1,0 +1,14 @@
+{
+  "name": "NEON BREAKER · 霓虹突围",
+  "short_name": "霓虹突围",
+  "description": "纯前端霓虹风格打砖块街机小游戏",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#07070f",
+  "theme_color": "#07070f",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
